@@ -33,7 +33,7 @@ int main() {
 	*/
 
 	Dictionary dic;
-	dic.openFile("src/dicionario1.txt");
+	dic.openFile("src/dicionario3.txt");
 	dic.processFileCommands();
 
 	dic.printSpace();

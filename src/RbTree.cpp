@@ -29,7 +29,7 @@ class RbTree{
 
         Node* treeMin(Node* node){
             Node* aux = node;
-            while(aux != nullptr){
+            while(!aux->isNullNode()){
                 aux = node->left;
             }
             return aux;
@@ -37,7 +37,7 @@ class RbTree{
 
         Node* treeMax(Node* node){
             Node* aux = node;
-            while(aux != nullptr){
+            while(!aux->isNullNode()){
                 aux = node->right;
             }
             return aux;
@@ -47,54 +47,58 @@ class RbTree{
 
             Node* y = node->right;
             node->right = y->left;
-            y->left->parent = node;
+
+            if(y->left->isNullNode()){
+                y->left->parent = node;
+            }
+
             y->parent = node->parent;
 
             if(node->parent->isNullNode()){
-                this->root = y;
+            	this->root = y;
             }
-            else {
-                if(node == node->parent->left){
-                    node->parent->left = y;
-
-                }
-                else{
-                    node->parent->right = y;
-                }
+            else{
+            	if(node == node->parent->left){
+            		node->parent->left = y;
+            	}
+            	else{
+            		node->parent->right = y;
+            	}
             }
             y->left = node;
             node->parent = y;
         }
 
         void rightRotate(Node* node){
+        	Node* y = node->left;
+			node->left = y->right;
 
-            Node* y = node->left;
-            node->left = y->right;
+			if(y->right->isNullNode()){
+				y->right->parent = node;
+			}
 
-            y->right->parent = node;
-            y->parent = node->parent;
+			y->parent = node->parent;
 
-            if(node->parent->isNullNode()){
-                this->root = y;
-            }
-            else {
-                if(node == node->parent->right){
-                    node->parent->right = y;
-
-                }
-                else{
-                    node->parent->left = y;
-                }
-            }
-            y->right = node;
-            node->parent = y;
+			if(node->parent->isNullNode()){
+				this->root = y;
+			}
+			else{
+				if(node == node->parent->right){
+					node->parent->right = y;
+				}
+				else{
+					node->parent->left = y;
+				}
+			}
+			y->right = node;
+			node->parent = y;
         }
 
         void insertNodeFixUp(Node* node){
 
             Node* y = new Node();
 
-            //WHILE NODE PARENT IS REDRED PARENT
+            //WHILE NODE PARENT IS RED
             while(node->parent->color == Color::RED){
 
                 //IF NODE PARENT IS LEFT
@@ -184,15 +188,15 @@ class RbTree{
 
             Node* y = new Node();
 
-            //WHILE NODE IS NOT THE ROOT AND ITS PARENT IS BLACK
-            while(node != this->root && node->parent->color == Color::BLACK){
+            //WHILE NODE IS NOT THE ROOT AND ITS COLOR IS BLACK
+            while(node != this->root && node->color == Color::BLACK){
 
-                if(node->parent->left){
+                if(node == node->parent->left){
                     y = node->parent->right;
 
                     if(y->color == Color::RED){
                         y->color = Color::BLACK;
-                        node->parent->color = Color::BLACK;
+                        node->parent->color = Color::RED;
                         leftRotate(node->parent);
                         y = node->parent->right;
                     }
@@ -216,34 +220,35 @@ class RbTree{
                     }
                 }
                 else{
-                    y = node->parent->left;
+                	y = node->parent->left;
 
-                    if(y->color == Color::RED){
-                        y->color = Color::BLACK;
-                        node->parent->color = Color::BLACK;
-                        rightRotate(node->parent);
-                        y = node->parent->left;
-                    }
+					if(y->color == Color::RED){
+						y->color = Color::BLACK;
+						node->parent->color = Color::RED;
+						rightRotate(node->parent);
+						y = node->parent->left;
+					}
 
-                    if(y->right->color == Color::BLACK && y->left->color == Color::BLACK){
-                        y->color = Color::RED;
-                        node = node->parent;
-                    }
-                    else{
-                        if(y->left->color == Color::BLACK){
-                            y->right->color = Color::BLACK;
-                            y->color = Color::RED;
-                            leftRotate(y);
+					if(y->right->color == Color::BLACK && y->left->color == Color::BLACK){
+						y->color = Color::RED;
+						node = node->parent;
+					}
+					else{
+						if(y->left->color == Color::BLACK){
+							y->right->color = Color::BLACK;
+							y->color = Color::RED;
+							leftRotate(y);
 							y = node->parent->left;
-                        }
-                        y->color = node->parent->color;
-                        node->parent->color = Color::BLACK;
-                        y->left->color = Color::BLACK;
-                        rightRotate(node->parent);
-                        node = this->root;
-                    }
-                }
+						}
+						y->color = node->parent->color;
+						node->parent->color = Color::BLACK;
+						y->left->color = Color::BLACK;
+						rightRotate(node->parent);
+						node = this->root;
+					}
+				}
             }
+            node->color = Color::BLACK;
         }
 
         void transplant(Node* u, Node* v){
@@ -267,9 +272,10 @@ class RbTree{
             y = node;
             Color originalYColor = y->color;
 
-            if (node->left->isNullNode()){
+            if(node->left->isNullNode()){
                 x = node->right;
                 transplant(node, node->right);
+
             }
             else if(node->right->isNullNode()){
                 x = node->left;
@@ -281,7 +287,7 @@ class RbTree{
                 x = y->right;
 
                 if(y->parent == node){
-                    x->parent = node;
+                    x->parent = y;
                 }
                 else{
                     transplant(y, y->right);

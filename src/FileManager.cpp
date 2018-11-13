@@ -66,7 +66,7 @@ class Dictionary{
 
 					//NODE IS ALREADY IN TREE
 					if(!node->isNullNode()){
-						deleteWord(word);
+						deleteWord(node);
 						cout << "Deletion made with success" << endl;
 					}
 					//NODE IS NOT IN TREE
@@ -74,6 +74,7 @@ class Dictionary{
 						cout << "Unrealized deletion" << endl;
 					}
 				}
+				cout << "------------------------" << endl;
 			}
 
 		}
@@ -81,20 +82,23 @@ class Dictionary{
 		void insertWord(string word){
 			Node* node = new Node(word);
 			rbt->insertNode(node);
+			checkTree();
+
 		}
 
-		void deleteWord(string word){
-			Node* node = new Node(word);
-			rbt->insertNode(node);
+		void deleteWord(Node* node){
+			rbt->deleteNode(node);
+			checkTree();
 		}
 
 		void checkTree(){
 			rbt->rbtCheck(rbt->root);
+			cout << endl << endl;
 		};
 
 		void printSpace(){
-			cout << "----------------------------------------";
 			cout << "----------------------------------------" << endl;
+			cout << "----------------------------------------";
 		}
 };
 
