@@ -92,12 +92,26 @@ class Dictionary{
 		}
 
 		void checkTree(){
+			cout << endl << "TREE CHECK:" << endl;
 			rbt->rbtCheck(rbt->root);
 		};
 
 		void printSpace(){
 			cout << "----------------------------------------" << endl;
-			cout << "----------------------------------------"<< endl;
+			cout << "----------------------------------------" << endl;
+		}
+
+		void printRbHeight(){
+			cout << endl << "TREE HEIGHT: " ;
+			cout << rbt->root->blackHeight(rbt->root, rbt->root);
+			cout << endl;
+		}
+
+		void printRbKeys(){
+			cout << endl << "TREE KEYS: " << endl;
+			string s = rbt->rbtPrint(rbt->root);
+			cout << s;
+			cout << endl;
 		}
 };
 

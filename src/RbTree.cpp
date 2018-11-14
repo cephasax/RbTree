@@ -347,6 +347,17 @@ class RbTree{
         	}
         }
 
+        string rbtPrint(Node* node){
+        	string s = "";
+        	if(!node->isNullNode()){
+        		s = rbtPrint(node->left);
+        		s += node->key;
+        		s += " ";
+				s += rbtPrint(node->right);
+			}
+        	return s;
+        }
+
 };
 
 #endif // _RB_TREE_

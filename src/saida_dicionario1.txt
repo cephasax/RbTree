@@ -1,0 +1,376 @@
+
+Delete of word: teste
+This RbTree is empty
+Unrealized deletion
+------------------------
+
+Insert of word: abuso
+This RbTree is empty
+
+TREE CHECK:
+(NIL, abuso, preto, 1, NIL, NIL)
+Insertion made with success
+------------------------
+
+Insert of word: carro
+This RbTree doesn't have this key: carro
+
+TREE CHECK:
+(NIL, abuso, preto, 1, NIL, carro)
+(abuso, carro, vermelho, 1, NIL, NIL)
+Insertion made with success
+------------------------
+
+Insert of word: doce
+This RbTree doesn't have this key: doce
+
+TREE CHECK:
+(NIL, carro, preto, 1, abuso, doce)
+(carro, abuso, vermelho, 1, NIL, NIL)
+(carro, doce, vermelho, 1, NIL, NIL)
+Insertion made with success
+------------------------
+
+Delete of word: gola
+This RbTree doesn't have this key: gola
+Unrealized deletion
+------------------------
+
+Insert of word: gola
+This RbTree doesn't have this key: gola
+
+TREE CHECK:
+(NIL, carro, preto, 2, abuso, doce)
+(carro, abuso, preto, 1, NIL, NIL)
+(carro, doce, preto, 1, NIL, gola)
+(doce, gola, vermelho, 1, NIL, NIL)
+Insertion made with success
+------------------------
+
+Insert of word: palhaço
+This RbTree doesn't have this key: palhaço
+
+TREE CHECK:
+(NIL, carro, preto, 2, abuso, gola)
+(carro, abuso, preto, 1, NIL, NIL)
+(carro, gola, preto, 1, doce, palhaço)
+(gola, doce, vermelho, 1, NIL, NIL)
+(gola, palhaço, vermelho, 1, NIL, NIL)
+Insertion made with success
+------------------------
+
+Insert of word: taturana
+This RbTree doesn't have this key: taturana
+
+TREE CHECK:
+(NIL, carro, preto, 2, abuso, gola)
+(carro, abuso, preto, 1, NIL, NIL)
+(carro, gola, vermelho, 2, doce, palhaço)
+(gola, doce, preto, 1, NIL, NIL)
+(gola, palhaço, preto, 1, NIL, taturana)
+(palhaço, taturana, vermelho, 1, NIL, NIL)
+Insertion made with success
+------------------------
+
+Insert of word: pacote
+This RbTree doesn't have this key: pacote
+
+TREE CHECK:
+(NIL, carro, preto, 2, abuso, gola)
+(carro, abuso, preto, 1, NIL, NIL)
+(carro, gola, vermelho, 2, doce, palhaço)
+(gola, doce, preto, 1, NIL, NIL)
+(gola, palhaço, preto, 1, pacote, taturana)
+(palhaço, pacote, vermelho, 1, NIL, NIL)
+(palhaço, taturana, vermelho, 1, NIL, NIL)
+Insertion made with success
+------------------------
+
+Insert of word: bolha
+This RbTree doesn't have this key: bolha
+
+TREE CHECK:
+(NIL, carro, preto, 2, abuso, gola)
+(carro, abuso, preto, 1, NIL, bolha)
+(abuso, bolha, vermelho, 1, NIL, NIL)
+(carro, gola, vermelho, 2, doce, palhaço)
+(gola, doce, preto, 1, NIL, NIL)
+(gola, palhaço, preto, 1, pacote, taturana)
+(palhaço, pacote, vermelho, 1, NIL, NIL)
+(palhaço, taturana, vermelho, 1, NIL, NIL)
+Insertion made with success
+------------------------
+
+Insert of word: fussura
+This RbTree doesn't have this key: fussura
+
+TREE CHECK:
+(NIL, carro, preto, 2, abuso, gola)
+(carro, abuso, preto, 1, NIL, bolha)
+(abuso, bolha, vermelho, 1, NIL, NIL)
+(carro, gola, vermelho, 2, doce, palhaço)
+(gola, doce, preto, 1, NIL, fussura)
+(doce, fussura, vermelho, 1, NIL, NIL)
+(gola, palhaço, preto, 1, pacote, taturana)
+(palhaço, pacote, vermelho, 1, NIL, NIL)
+(palhaço, taturana, vermelho, 1, NIL, NIL)
+Insertion made with success
+------------------------
+
+Insert of word: batata
+This RbTree doesn't have this key: batata
+
+TREE CHECK:
+(NIL, carro, preto, 2, batata, gola)
+(carro, batata, preto, 1, abuso, bolha)
+(batata, abuso, vermelho, 1, NIL, NIL)
+(batata, bolha, vermelho, 1, NIL, NIL)
+(carro, gola, vermelho, 2, doce, palhaço)
+(gola, doce, preto, 1, NIL, fussura)
+(doce, fussura, vermelho, 1, NIL, NIL)
+(gola, palhaço, preto, 1, pacote, taturana)
+(palhaço, pacote, vermelho, 1, NIL, NIL)
+(palhaço, taturana, vermelho, 1, NIL, NIL)
+Insertion made with success
+------------------------
+
+Insert of word: estrela
+This RbTree doesn't have this key: estrela
+
+TREE CHECK:
+(NIL, carro, preto, 2, batata, gola)
+(carro, batata, preto, 1, abuso, bolha)
+(batata, abuso, vermelho, 1, NIL, NIL)
+(batata, bolha, vermelho, 1, NIL, NIL)
+(carro, gola, vermelho, 2, estrela, palhaço)
+(gola, estrela, preto, 1, doce, fussura)
+(estrela, doce, vermelho, 1, NIL, NIL)
+(estrela, fussura, vermelho, 1, NIL, NIL)
+(gola, palhaço, preto, 1, pacote, taturana)
+(palhaço, pacote, vermelho, 1, NIL, NIL)
+(palhaço, taturana, vermelho, 1, NIL, NIL)
+Insertion made with success
+------------------------
+
+Delete of word: taturana
+Key: "taturana" was found inside node -> (palhaço, taturana, vermelho, 1, NIL, NIL)
+
+TREE CHECK:
+(NIL, carro, preto, 2, batata, gola)
+(carro, batata, preto, 1, abuso, bolha)
+(batata, abuso, vermelho, 1, NIL, NIL)
+(batata, bolha, vermelho, 1, NIL, NIL)
+(carro, gola, vermelho, 2, estrela, palhaço)
+(gola, estrela, preto, 1, doce, fussura)
+(estrela, doce, vermelho, 1, NIL, NIL)
+(estrela, fussura, vermelho, 1, NIL, NIL)
+(gola, palhaço, preto, 1, pacote, NIL)
+(palhaço, pacote, vermelho, 1, NIL, NIL)
+Deletion made with success
+------------------------
+
+Insert of word: cataplana
+This RbTree doesn't have this key: cataplana
+
+TREE CHECK:
+(NIL, estrela, preto, 2, carro, gola)
+(estrela, carro, vermelho, 2, batata, doce)
+(carro, batata, preto, 1, abuso, bolha)
+(batata, abuso, vermelho, 1, NIL, NIL)
+(batata, bolha, vermelho, 1, NIL, NIL)
+(carro, doce, preto, 1, cataplana, NIL)
+(doce, cataplana, vermelho, 1, NIL, NIL)
+(estrela, gola, vermelho, 2, fussura, palhaço)
+(gola, fussura, preto, 1, NIL, NIL)
+(gola, palhaço, preto, 1, pacote, NIL)
+(palhaço, pacote, vermelho, 1, NIL, NIL)
+Insertion made with success
+------------------------
+
+Insert of word: cerveja
+This RbTree doesn't have this key: cerveja
+
+TREE CHECK:
+(NIL, estrela, preto, 2, carro, gola)
+(estrela, carro, vermelho, 2, batata, cerveja)
+(carro, batata, preto, 1, abuso, bolha)
+(batata, abuso, vermelho, 1, NIL, NIL)
+(batata, bolha, vermelho, 1, NIL, NIL)
+(carro, cerveja, preto, 1, cataplana, doce)
+(cerveja, cataplana, vermelho, 1, NIL, NIL)
+(cerveja, doce, vermelho, 1, NIL, NIL)
+(estrela, gola, vermelho, 2, fussura, palhaço)
+(gola, fussura, preto, 1, NIL, NIL)
+(gola, palhaço, preto, 1, pacote, NIL)
+(palhaço, pacote, vermelho, 1, NIL, NIL)
+Insertion made with success
+------------------------
+
+Insert of word: zebra
+This RbTree doesn't have this key: zebra
+
+TREE CHECK:
+(NIL, estrela, preto, 2, carro, gola)
+(estrela, carro, vermelho, 2, batata, cerveja)
+(carro, batata, preto, 1, abuso, bolha)
+(batata, abuso, vermelho, 1, NIL, NIL)
+(batata, bolha, vermelho, 1, NIL, NIL)
+(carro, cerveja, preto, 1, cataplana, doce)
+(cerveja, cataplana, vermelho, 1, NIL, NIL)
+(cerveja, doce, vermelho, 1, NIL, NIL)
+(estrela, gola, vermelho, 2, fussura, palhaço)
+(gola, fussura, preto, 1, NIL, NIL)
+(gola, palhaço, preto, 1, pacote, zebra)
+(palhaço, pacote, vermelho, 1, NIL, NIL)
+(palhaço, zebra, vermelho, 1, NIL, NIL)
+Insertion made with success
+------------------------
+
+Insert of word: lis
+This RbTree doesn't have this key: lis
+
+TREE CHECK:
+(NIL, estrela, preto, 3, carro, gola)
+(estrela, carro, preto, 2, batata, cerveja)
+(carro, batata, preto, 1, abuso, bolha)
+(batata, abuso, vermelho, 1, NIL, NIL)
+(batata, bolha, vermelho, 1, NIL, NIL)
+(carro, cerveja, preto, 1, cataplana, doce)
+(cerveja, cataplana, vermelho, 1, NIL, NIL)
+(cerveja, doce, vermelho, 1, NIL, NIL)
+(estrela, gola, preto, 2, fussura, palhaço)
+(gola, fussura, preto, 1, NIL, NIL)
+(gola, palhaço, vermelho, 2, pacote, zebra)
+(palhaço, pacote, preto, 1, lis, NIL)
+(pacote, lis, vermelho, 1, NIL, NIL)
+(palhaço, zebra, preto, 1, NIL, NIL)
+Insertion made with success
+------------------------
+
+Insert of word: almirante
+This RbTree doesn't have this key: almirante
+
+TREE CHECK:
+(NIL, estrela, preto, 3, carro, gola)
+(estrela, carro, preto, 2, batata, cerveja)
+(carro, batata, vermelho, 2, abuso, bolha)
+(batata, abuso, preto, 1, NIL, almirante)
+(abuso, almirante, vermelho, 1, NIL, NIL)
+(batata, bolha, preto, 1, NIL, NIL)
+(carro, cerveja, preto, 1, cataplana, doce)
+(cerveja, cataplana, vermelho, 1, NIL, NIL)
+(cerveja, doce, vermelho, 1, NIL, NIL)
+(estrela, gola, preto, 2, fussura, palhaço)
+(gola, fussura, preto, 1, NIL, NIL)
+(gola, palhaço, vermelho, 2, pacote, zebra)
+(palhaço, pacote, preto, 1, lis, NIL)
+(pacote, lis, vermelho, 1, NIL, NIL)
+(palhaço, zebra, preto, 1, NIL, NIL)
+Insertion made with success
+------------------------
+
+Insert of word: elefante
+This RbTree doesn't have this key: elefante
+
+TREE CHECK:
+(NIL, estrela, preto, 3, carro, gola)
+(estrela, carro, preto, 2, batata, cerveja)
+(carro, batata, vermelho, 2, abuso, bolha)
+(batata, abuso, preto, 1, NIL, almirante)
+(abuso, almirante, vermelho, 1, NIL, NIL)
+(batata, bolha, preto, 1, NIL, NIL)
+(carro, cerveja, vermelho, 2, cataplana, doce)
+(cerveja, cataplana, preto, 1, NIL, NIL)
+(cerveja, doce, preto, 1, NIL, elefante)
+(doce, elefante, vermelho, 1, NIL, NIL)
+(estrela, gola, preto, 2, fussura, palhaço)
+(gola, fussura, preto, 1, NIL, NIL)
+(gola, palhaço, vermelho, 2, pacote, zebra)
+(palhaço, pacote, preto, 1, lis, NIL)
+(pacote, lis, vermelho, 1, NIL, NIL)
+(palhaço, zebra, preto, 1, NIL, NIL)
+Insertion made with success
+------------------------
+
+Insert of word: espaço
+This RbTree doesn't have this key: espaço
+
+TREE CHECK:
+(NIL, estrela, preto, 3, carro, gola)
+(estrela, carro, preto, 2, batata, cerveja)
+(carro, batata, vermelho, 2, abuso, bolha)
+(batata, abuso, preto, 1, NIL, almirante)
+(abuso, almirante, vermelho, 1, NIL, NIL)
+(batata, bolha, preto, 1, NIL, NIL)
+(carro, cerveja, vermelho, 2, cataplana, elefante)
+(cerveja, cataplana, preto, 1, NIL, NIL)
+(cerveja, elefante, preto, 1, doce, espaço)
+(elefante, doce, vermelho, 1, NIL, NIL)
+(elefante, espaço, vermelho, 1, NIL, NIL)
+(estrela, gola, preto, 2, fussura, palhaço)
+(gola, fussura, preto, 1, NIL, NIL)
+(gola, palhaço, vermelho, 2, pacote, zebra)
+(palhaço, pacote, preto, 1, lis, NIL)
+(pacote, lis, vermelho, 1, NIL, NIL)
+(palhaço, zebra, preto, 1, NIL, NIL)
+Insertion made with success
+------------------------
+
+Insert of word: estrela
+Key: "estrela" was found inside node -> (NIL, estrela, preto, 3, carro, gola)
+Unrealized insertion
+------------------------
+
+Delete of word: cataplana
+Key: "cataplana" was found inside node -> (cerveja, cataplana, preto, 1, NIL, NIL)
+
+TREE CHECK:
+(NIL, estrela, preto, 3, carro, gola)
+(estrela, carro, preto, 2, batata, elefante)
+(carro, batata, vermelho, 2, abuso, bolha)
+(batata, abuso, preto, 1, NIL, almirante)
+(abuso, almirante, vermelho, 1, NIL, NIL)
+(batata, bolha, preto, 1, NIL, NIL)
+(carro, elefante, vermelho, 2, cerveja, espaço)
+(elefante, cerveja, preto, 1, NIL, doce)
+(cerveja, doce, vermelho, 1, NIL, NIL)
+(elefante, espaço, preto, 1, NIL, NIL)
+(estrela, gola, preto, 2, fussura, palhaço)
+(gola, fussura, preto, 1, NIL, NIL)
+(gola, palhaço, vermelho, 2, pacote, zebra)
+(palhaço, pacote, preto, 1, lis, NIL)
+(pacote, lis, vermelho, 1, NIL, NIL)
+(palhaço, zebra, preto, 1, NIL, NIL)
+Deletion made with success
+------------------------
+----------------------------------------
+----------------------------------------
+
+TREE CHECK:
+(NIL, estrela, preto, 3, carro, gola)
+(estrela, carro, preto, 2, batata, elefante)
+(carro, batata, vermelho, 2, abuso, bolha)
+(batata, abuso, preto, 1, NIL, almirante)
+(abuso, almirante, vermelho, 1, NIL, NIL)
+(batata, bolha, preto, 1, NIL, NIL)
+(carro, elefante, vermelho, 2, cerveja, espaço)
+(elefante, cerveja, preto, 1, NIL, doce)
+(cerveja, doce, vermelho, 1, NIL, NIL)
+(elefante, espaço, preto, 1, NIL, NIL)
+(estrela, gola, preto, 2, fussura, palhaço)
+(gola, fussura, preto, 1, NIL, NIL)
+(gola, palhaço, vermelho, 2, pacote, zebra)
+(palhaço, pacote, preto, 1, lis, NIL)
+(pacote, lis, vermelho, 1, NIL, NIL)
+(palhaço, zebra, preto, 1, NIL, NIL)
+----------------------------------------
+----------------------------------------
+
+TREE HEIGHT: 3
+----------------------------------------
+----------------------------------------
+
+TREE KEYS: 
+abuso almirante batata bolha carro cerveja doce elefante espaço estrela fussura gola lis pacote palhaço zebra 
+----------------------------------------
+----------------------------------------
