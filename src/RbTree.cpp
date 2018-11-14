@@ -48,7 +48,7 @@ class RbTree{
             Node* y = node->right;
             node->right = y->left;
 
-            if(y->left->isNullNode()){
+            if(!y->left->isNullNode()){
                 y->left->parent = node;
             }
 
@@ -73,7 +73,7 @@ class RbTree{
         	Node* y = node->left;
 			node->left = y->right;
 
-			if(y->right->isNullNode()){
+			if(!y->right->isNullNode()){
 				y->right->parent = node;
 			}
 
@@ -158,7 +158,7 @@ class RbTree{
 
             while(!x->isNullNode()){
                 y = x;
-                if(node->key < x->key){
+                if(node->key.compare(x->key) < 0){
                     x = x->left;
                 }
                 else{
@@ -171,7 +171,7 @@ class RbTree{
                 this->root = node;
             }
             else{
-                if(node->key < y->key){
+                if(node->key.compare(y->key) < 0){
                     y->left = node;
                 }
                 else{

@@ -67,7 +67,7 @@ class Node{
             }
             nodeText += ", ";
 
-            nodeText += to_string(this->blackHeight(this));
+            nodeText += to_string(this->blackHeight(this,this));
             nodeText += ", ";
 
             if(this->left != nullptr){
@@ -100,41 +100,45 @@ class Node{
             return nodeText;
         }
 
-        int blackHeight(Node* node){
+        int blackHeight(Node* node, Node* root){
 
-            int leftHeight = 1;
-            int rightHeight = 1;
+        	//COUNT IF NODE IS (BLACK AND NIL) or NODE IS (BLACK AND NOT THE ROOT)
+        	if(node->isNullNode() && (node == root)){
+        		left = 0;
+        		right = 0;
+        	}
+        	else{
+        		if(node->isNullNode()){
+        			return 1;
+        		}else{
 
-            //check if is a null node
-            if(node->isNullNode()){
-                return 0;
-            }
-            else{
-                if(node->color == Color::BLACK){
-                    leftHeight++;
-                    rightHeight++;
-                }
-            }
+                	int left = 0;
+                	int right = 0;
+                	int no = 0;
 
-            //increment recursive blackHeight for only not-null sides
-            if(node->left != nullptr){
-                leftHeight += blackHeight(node->left);
-            }
-            if(node->right != nullptr){
-                rightHeight += blackHeight(node->right);
-            }
+                	if(node->color==Color::BLACK && node!=root){
+                		no=1;
+                	}
 
-            //return the major value
-            if(leftHeight >= rightHeight){
-                return leftHeight;
-            }
-            else{
-                return rightHeight;
-            }
+        			if(node->left != nullptr){
+        				left = no+blackHeight(node->left,root);
+        			}
+
+        			if(node->right != nullptr){
+        				right = no+blackHeight(node->right,root);
+        			}
+
+        			if(left>=right){
+        				return left;
+        			}
+        			else{
+        				return right;
+        			}
+        		}
+        	}
+
+        	return 0;
         }
-
-    private:
-
 };
 
 #endif // _NODE_

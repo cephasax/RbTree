@@ -6,7 +6,6 @@
 // Description : Hello World in C++, Ansi-style
 //============================================================================
 
-
 #include <iostream>
 #include "RbTree.cpp"
 #include "Node.cpp"
@@ -33,7 +32,7 @@ int main() {
 	*/
 
 	Dictionary dic;
-	dic.openFile("src/dicionario3.txt");
+	dic.openFile("src/dicionario1.txt");
 	dic.processFileCommands();
 
 	dic.printSpace();

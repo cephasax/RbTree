@@ -93,12 +93,11 @@ class Dictionary{
 
 		void checkTree(){
 			rbt->rbtCheck(rbt->root);
-			cout << endl << endl;
 		};
 
 		void printSpace(){
 			cout << "----------------------------------------" << endl;
-			cout << "----------------------------------------";
+			cout << "----------------------------------------"<< endl;
 		}
 };
 
