@@ -9,8 +9,8 @@
 #include <iostream>
 #include <fstream>
 
-#include "RbTree.cpp"
 #include "Node.cpp"
+#include "RbT.cpp"
 
 using namespace std;
 
@@ -25,10 +25,10 @@ class Dictionary{
 
 		}
 
-		void openFile(string path){
+		void openFile(string path) {
 			this->file.open(path);
 
-			if (!file.is_open()){
+			if (!file.is_open()) {
 				cout << "The file wasn't opened. Please check entire path and file name." << endl;
 				return;
 			}

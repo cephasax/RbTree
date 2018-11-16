@@ -21,3 +21,4 @@ elefante 1
 espaço 1
 estrela 1
 cataplana 0
+estrela 0
