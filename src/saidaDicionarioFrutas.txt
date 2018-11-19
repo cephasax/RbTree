@@ -1,0 +1,453 @@
+The file wasn't opened. Please check entire path and file name.
+The RbTree will use default file name because the given file is invalid. Default file name is "dicionarioFrutas.txt"
+
+Insert of word: abacaxi
+This RbTree is empty
+
+TREE CHECK:
+(NIL, abacaxi, preto, 1, NIL, NIL)
+Insertion made with success
+------------------------
+
+Insert of word: mamão
+This RbTree doesn't have this key: mamão
+
+TREE CHECK:
+(NIL, abacaxi, preto, 1, NIL, mamão)
+(abacaxi, mamão, vermelho, 1, NIL, NIL)
+Insertion made with success
+------------------------
+
+Insert of word: abacate
+This RbTree doesn't have this key: abacate
+
+TREE CHECK:
+(NIL, abacaxi, preto, 1, abacate, mamão)
+(abacaxi, abacate, vermelho, 1, NIL, NIL)
+(abacaxi, mamão, vermelho, 1, NIL, NIL)
+Insertion made with success
+------------------------
+
+Insert of word: melão
+This RbTree doesn't have this key: melão
+
+TREE CHECK:
+(NIL, abacaxi, preto, 2, abacate, mamão)
+(abacaxi, abacate, preto, 1, NIL, NIL)
+(abacaxi, mamão, preto, 1, NIL, melão)
+(mamão, melão, vermelho, 1, NIL, NIL)
+Insertion made with success
+------------------------
+
+Insert of word: laranja
+This RbTree doesn't have this key: laranja
+
+TREE CHECK:
+(NIL, abacaxi, preto, 2, abacate, mamão)
+(abacaxi, abacate, preto, 1, NIL, NIL)
+(abacaxi, mamão, preto, 1, laranja, melão)
+(mamão, laranja, vermelho, 1, NIL, NIL)
+(mamão, melão, vermelho, 1, NIL, NIL)
+Insertion made with success
+------------------------
+
+Insert of word: banana
+This RbTree doesn't have this key: banana
+
+TREE CHECK:
+(NIL, abacaxi, preto, 2, abacate, mamão)
+(abacaxi, abacate, preto, 1, NIL, NIL)
+(abacaxi, mamão, vermelho, 2, laranja, melão)
+(mamão, laranja, preto, 1, banana, NIL)
+(laranja, banana, vermelho, 1, NIL, NIL)
+(mamão, melão, preto, 1, NIL, NIL)
+Insertion made with success
+------------------------
+
+Insert of word: maçã
+This RbTree doesn't have this key: maçã
+
+TREE CHECK:
+(NIL, abacaxi, preto, 2, abacate, mamão)
+(abacaxi, abacate, preto, 1, NIL, NIL)
+(abacaxi, mamão, vermelho, 2, laranja, melão)
+(mamão, laranja, preto, 1, banana, NIL)
+(laranja, banana, vermelho, 1, NIL, NIL)
+(mamão, melão, preto, 1, maçã, NIL)
+(melão, maçã, vermelho, 1, NIL, NIL)
+Insertion made with success
+------------------------
+
+Insert of word: uva
+This RbTree doesn't have this key: uva
+
+TREE CHECK:
+(NIL, abacaxi, preto, 2, abacate, mamão)
+(abacaxi, abacate, preto, 1, NIL, NIL)
+(abacaxi, mamão, vermelho, 2, laranja, melão)
+(mamão, laranja, preto, 1, banana, NIL)
+(laranja, banana, vermelho, 1, NIL, NIL)
+(mamão, melão, preto, 1, maçã, uva)
+(melão, maçã, vermelho, 1, NIL, NIL)
+(melão, uva, vermelho, 1, NIL, NIL)
+Insertion made with success
+------------------------
+
+Insert of word: limão
+This RbTree doesn't have this key: limão
+
+TREE CHECK:
+(NIL, abacaxi, preto, 2, abacate, mamão)
+(abacaxi, abacate, preto, 1, NIL, NIL)
+(abacaxi, mamão, vermelho, 2, laranja, melão)
+(mamão, laranja, preto, 1, banana, limão)
+(laranja, banana, vermelho, 1, NIL, NIL)
+(laranja, limão, vermelho, 1, NIL, NIL)
+(mamão, melão, preto, 1, maçã, uva)
+(melão, maçã, vermelho, 1, NIL, NIL)
+(melão, uva, vermelho, 1, NIL, NIL)
+Insertion made with success
+------------------------
+
+Insert of word: pêssego
+This RbTree doesn't have this key: pêssego
+
+TREE CHECK:
+(NIL, mamão, preto, 2, abacaxi, melão)
+(mamão, abacaxi, vermelho, 2, abacate, laranja)
+(abacaxi, abacate, preto, 1, NIL, NIL)
+(abacaxi, laranja, preto, 1, banana, limão)
+(laranja, banana, vermelho, 1, NIL, NIL)
+(laranja, limão, vermelho, 1, NIL, NIL)
+(mamão, melão, vermelho, 2, maçã, uva)
+(melão, maçã, preto, 1, NIL, NIL)
+(melão, uva, preto, 1, pêssego, NIL)
+(uva, pêssego, vermelho, 1, NIL, NIL)
+Insertion made with success
+------------------------
+
+Insert of word: figo
+This RbTree doesn't have this key: figo
+
+TREE CHECK:
+(NIL, mamão, preto, 3, abacaxi, melão)
+(mamão, abacaxi, preto, 2, abacate, laranja)
+(abacaxi, abacate, preto, 1, NIL, NIL)
+(abacaxi, laranja, vermelho, 2, banana, limão)
+(laranja, banana, preto, 1, NIL, figo)
+(banana, figo, vermelho, 1, NIL, NIL)
+(laranja, limão, preto, 1, NIL, NIL)
+(mamão, melão, preto, 2, maçã, uva)
+(melão, maçã, preto, 1, NIL, NIL)
+(melão, uva, preto, 1, pêssego, NIL)
+(uva, pêssego, vermelho, 1, NIL, NIL)
+Insertion made with success
+------------------------
+
+Insert of word: maracujá
+This RbTree doesn't have this key: maracujá
+
+TREE CHECK:
+(NIL, mamão, preto, 3, abacaxi, melão)
+(mamão, abacaxi, preto, 2, abacate, laranja)
+(abacaxi, abacate, preto, 1, NIL, NIL)
+(abacaxi, laranja, vermelho, 2, banana, limão)
+(laranja, banana, preto, 1, NIL, figo)
+(banana, figo, vermelho, 1, NIL, NIL)
+(laranja, limão, preto, 1, NIL, NIL)
+(mamão, melão, preto, 2, maçã, uva)
+(melão, maçã, preto, 1, maracujá, NIL)
+(maçã, maracujá, vermelho, 1, NIL, NIL)
+(melão, uva, preto, 1, pêssego, NIL)
+(uva, pêssego, vermelho, 1, NIL, NIL)
+Insertion made with success
+------------------------
+
+Insert of word: melancia
+This RbTree doesn't have this key: melancia
+
+TREE CHECK:
+(NIL, mamão, preto, 3, abacaxi, melão)
+(mamão, abacaxi, preto, 2, abacate, laranja)
+(abacaxi, abacate, preto, 1, NIL, NIL)
+(abacaxi, laranja, vermelho, 2, banana, limão)
+(laranja, banana, preto, 1, NIL, figo)
+(banana, figo, vermelho, 1, NIL, NIL)
+(laranja, limão, preto, 1, NIL, NIL)
+(mamão, melão, preto, 2, maçã, uva)
+(melão, maçã, preto, 1, maracujá, melancia)
+(maçã, maracujá, vermelho, 1, NIL, NIL)
+(maçã, melancia, vermelho, 1, NIL, NIL)
+(melão, uva, preto, 1, pêssego, NIL)
+(uva, pêssego, vermelho, 1, NIL, NIL)
+Insertion made with success
+------------------------
+
+Insert of word: caqui
+This RbTree doesn't have this key: caqui
+
+TREE CHECK:
+(NIL, mamão, preto, 3, abacaxi, melão)
+(mamão, abacaxi, preto, 2, abacate, laranja)
+(abacaxi, abacate, preto, 1, NIL, NIL)
+(abacaxi, laranja, vermelho, 2, caqui, limão)
+(laranja, caqui, preto, 1, banana, figo)
+(caqui, banana, vermelho, 1, NIL, NIL)
+(caqui, figo, vermelho, 1, NIL, NIL)
+(laranja, limão, preto, 1, NIL, NIL)
+(mamão, melão, preto, 2, maçã, uva)
+(melão, maçã, preto, 1, maracujá, melancia)
+(maçã, maracujá, vermelho, 1, NIL, NIL)
+(maçã, melancia, vermelho, 1, NIL, NIL)
+(melão, uva, preto, 1, pêssego, NIL)
+(uva, pêssego, vermelho, 1, NIL, NIL)
+Insertion made with success
+------------------------
+
+Insert of word: tangerina
+This RbTree doesn't have this key: tangerina
+
+TREE CHECK:
+(NIL, mamão, preto, 3, abacaxi, melão)
+(mamão, abacaxi, preto, 2, abacate, laranja)
+(abacaxi, abacate, preto, 1, NIL, NIL)
+(abacaxi, laranja, vermelho, 2, caqui, limão)
+(laranja, caqui, preto, 1, banana, figo)
+(caqui, banana, vermelho, 1, NIL, NIL)
+(caqui, figo, vermelho, 1, NIL, NIL)
+(laranja, limão, preto, 1, NIL, NIL)
+(mamão, melão, preto, 2, maçã, tangerina)
+(melão, maçã, preto, 1, maracujá, melancia)
+(maçã, maracujá, vermelho, 1, NIL, NIL)
+(maçã, melancia, vermelho, 1, NIL, NIL)
+(melão, tangerina, preto, 1, pêssego, uva)
+(tangerina, pêssego, vermelho, 1, NIL, NIL)
+(tangerina, uva, vermelho, 1, NIL, NIL)
+Insertion made with success
+------------------------
+
+Insert of word: coco
+This RbTree doesn't have this key: coco
+
+TREE CHECK:
+(NIL, mamão, preto, 3, caqui, melão)
+(mamão, caqui, preto, 2, abacaxi, laranja)
+(caqui, abacaxi, vermelho, 2, abacate, banana)
+(abacaxi, abacate, preto, 1, NIL, NIL)
+(abacaxi, banana, preto, 1, NIL, NIL)
+(caqui, laranja, vermelho, 2, figo, limão)
+(laranja, figo, preto, 1, coco, NIL)
+(figo, coco, vermelho, 1, NIL, NIL)
+(laranja, limão, preto, 1, NIL, NIL)
+(mamão, melão, preto, 2, maçã, tangerina)
+(melão, maçã, preto, 1, maracujá, melancia)
+(maçã, maracujá, vermelho, 1, NIL, NIL)
+(maçã, melancia, vermelho, 1, NIL, NIL)
+(melão, tangerina, preto, 1, pêssego, uva)
+(tangerina, pêssego, vermelho, 1, NIL, NIL)
+(tangerina, uva, vermelho, 1, NIL, NIL)
+Insertion made with success
+------------------------
+
+Insert of word: manga
+This RbTree doesn't have this key: manga
+
+TREE CHECK:
+(NIL, mamão, preto, 3, caqui, melão)
+(mamão, caqui, preto, 2, abacaxi, laranja)
+(caqui, abacaxi, vermelho, 2, abacate, banana)
+(abacaxi, abacate, preto, 1, NIL, NIL)
+(abacaxi, banana, preto, 1, NIL, NIL)
+(caqui, laranja, vermelho, 2, figo, limão)
+(laranja, figo, preto, 1, coco, NIL)
+(figo, coco, vermelho, 1, NIL, NIL)
+(laranja, limão, preto, 1, NIL, NIL)
+(mamão, melão, preto, 2, maçã, tangerina)
+(melão, maçã, vermelho, 2, maracujá, melancia)
+(maçã, maracujá, preto, 1, manga, NIL)
+(maracujá, manga, vermelho, 1, NIL, NIL)
+(maçã, melancia, preto, 1, NIL, NIL)
+(melão, tangerina, preto, 1, pêssego, uva)
+(tangerina, pêssego, vermelho, 1, NIL, NIL)
+(tangerina, uva, vermelho, 1, NIL, NIL)
+Insertion made with success
+------------------------
+
+Insert of word: marmelo
+This RbTree doesn't have this key: marmelo
+
+TREE CHECK:
+(NIL, mamão, preto, 3, caqui, melão)
+(mamão, caqui, preto, 2, abacaxi, laranja)
+(caqui, abacaxi, vermelho, 2, abacate, banana)
+(abacaxi, abacate, preto, 1, NIL, NIL)
+(abacaxi, banana, preto, 1, NIL, NIL)
+(caqui, laranja, vermelho, 2, figo, limão)
+(laranja, figo, preto, 1, coco, NIL)
+(figo, coco, vermelho, 1, NIL, NIL)
+(laranja, limão, preto, 1, NIL, NIL)
+(mamão, melão, preto, 2, maçã, tangerina)
+(melão, maçã, vermelho, 2, maracujá, melancia)
+(maçã, maracujá, preto, 1, manga, marmelo)
+(maracujá, manga, vermelho, 1, NIL, NIL)
+(maracujá, marmelo, vermelho, 1, NIL, NIL)
+(maçã, melancia, preto, 1, NIL, NIL)
+(melão, tangerina, preto, 1, pêssego, uva)
+(tangerina, pêssego, vermelho, 1, NIL, NIL)
+(tangerina, uva, vermelho, 1, NIL, NIL)
+Insertion made with success
+------------------------
+
+Insert of word: goiaba
+This RbTree doesn't have this key: goiaba
+
+TREE CHECK:
+(NIL, mamão, preto, 3, caqui, melão)
+(mamão, caqui, preto, 2, abacaxi, laranja)
+(caqui, abacaxi, vermelho, 2, abacate, banana)
+(abacaxi, abacate, preto, 1, NIL, NIL)
+(abacaxi, banana, preto, 1, NIL, NIL)
+(caqui, laranja, vermelho, 2, figo, limão)
+(laranja, figo, preto, 1, coco, goiaba)
+(figo, coco, vermelho, 1, NIL, NIL)
+(figo, goiaba, vermelho, 1, NIL, NIL)
+(laranja, limão, preto, 1, NIL, NIL)
+(mamão, melão, preto, 2, maçã, tangerina)
+(melão, maçã, vermelho, 2, maracujá, melancia)
+(maçã, maracujá, preto, 1, manga, marmelo)
+(maracujá, manga, vermelho, 1, NIL, NIL)
+(maracujá, marmelo, vermelho, 1, NIL, NIL)
+(maçã, melancia, preto, 1, NIL, NIL)
+(melão, tangerina, preto, 1, pêssego, uva)
+(tangerina, pêssego, vermelho, 1, NIL, NIL)
+(tangerina, uva, vermelho, 1, NIL, NIL)
+Insertion made with success
+------------------------
+
+Insert of word: pera
+This RbTree doesn't have this key: pera
+
+TREE CHECK:
+(NIL, mamão, preto, 3, caqui, melão)
+(mamão, caqui, preto, 2, abacaxi, laranja)
+(caqui, abacaxi, vermelho, 2, abacate, banana)
+(abacaxi, abacate, preto, 1, NIL, NIL)
+(abacaxi, banana, preto, 1, NIL, NIL)
+(caqui, laranja, vermelho, 2, figo, limão)
+(laranja, figo, preto, 1, coco, goiaba)
+(figo, coco, vermelho, 1, NIL, NIL)
+(figo, goiaba, vermelho, 1, NIL, NIL)
+(laranja, limão, preto, 1, NIL, NIL)
+(mamão, melão, preto, 2, maçã, tangerina)
+(melão, maçã, vermelho, 2, maracujá, melancia)
+(maçã, maracujá, preto, 1, manga, marmelo)
+(maracujá, manga, vermelho, 1, NIL, NIL)
+(maracujá, marmelo, vermelho, 1, NIL, NIL)
+(maçã, melancia, preto, 1, NIL, NIL)
+(melão, tangerina, vermelho, 2, pêssego, uva)
+(tangerina, pêssego, preto, 1, pera, NIL)
+(pêssego, pera, vermelho, 1, NIL, NIL)
+(tangerina, uva, preto, 1, NIL, NIL)
+Insertion made with success
+------------------------
+
+Delete of word: chocolate
+This RbTree doesn't have this key: chocolate
+Unrealized deletion
+------------------------
+
+Delete of word: coco
+Key: "coco" was found inside node -> (figo, coco, vermelho, 1, NIL, NIL)
+
+TREE CHECK:
+(NIL, mamão, preto, 3, caqui, melão)
+(mamão, caqui, preto, 2, abacaxi, laranja)
+(caqui, abacaxi, vermelho, 2, abacate, banana)
+(abacaxi, abacate, preto, 1, NIL, NIL)
+(abacaxi, banana, preto, 1, NIL, NIL)
+(caqui, laranja, vermelho, 2, figo, limão)
+(laranja, figo, preto, 1, NIL, goiaba)
+(figo, goiaba, vermelho, 1, NIL, NIL)
+(laranja, limão, preto, 1, NIL, NIL)
+(mamão, melão, preto, 2, maçã, tangerina)
+(melão, maçã, vermelho, 2, maracujá, melancia)
+(maçã, maracujá, preto, 1, manga, marmelo)
+(maracujá, manga, vermelho, 1, NIL, NIL)
+(maracujá, marmelo, vermelho, 1, NIL, NIL)
+(maçã, melancia, preto, 1, NIL, NIL)
+(melão, tangerina, vermelho, 2, pêssego, uva)
+(tangerina, pêssego, preto, 1, pera, NIL)
+(pêssego, pera, vermelho, 1, NIL, NIL)
+(tangerina, uva, preto, 1, NIL, NIL)
+Deletion made with success
+------------------------
+
+Insert of word: coco
+This RbTree doesn't have this key: coco
+
+TREE CHECK:
+(NIL, mamão, preto, 3, caqui, melão)
+(mamão, caqui, preto, 2, abacaxi, laranja)
+(caqui, abacaxi, vermelho, 2, abacate, banana)
+(abacaxi, abacate, preto, 1, NIL, NIL)
+(abacaxi, banana, preto, 1, NIL, NIL)
+(caqui, laranja, vermelho, 2, figo, limão)
+(laranja, figo, preto, 1, coco, goiaba)
+(figo, coco, vermelho, 1, NIL, NIL)
+(figo, goiaba, vermelho, 1, NIL, NIL)
+(laranja, limão, preto, 1, NIL, NIL)
+(mamão, melão, preto, 2, maçã, tangerina)
+(melão, maçã, vermelho, 2, maracujá, melancia)
+(maçã, maracujá, preto, 1, manga, marmelo)
+(maracujá, manga, vermelho, 1, NIL, NIL)
+(maracujá, marmelo, vermelho, 1, NIL, NIL)
+(maçã, melancia, preto, 1, NIL, NIL)
+(melão, tangerina, vermelho, 2, pêssego, uva)
+(tangerina, pêssego, preto, 1, pera, NIL)
+(pêssego, pera, vermelho, 1, NIL, NIL)
+(tangerina, uva, preto, 1, NIL, NIL)
+Insertion made with success
+------------------------
+----------------------------------------
+----------------------------------------
+RbTree was made with success and you can proceed with other operations
+
+Enter word to search inside the RbTree built
+cephas
+This RbTree doesn't have this key: cephas
+
+Enter word to search inside the RbTree built
+tangerina
+Key: "tangerina" was found inside node -> (melão, tangerina, vermelho, 2, pêssego, uva)
+
+Enter word to search inside the RbTree built
+
+No one word to find, so...
+
+TREE KEYS: 
+abacate abacaxi banana caqui coco figo goiaba laranja limão mamão manga maracujá marmelo maçã melancia melão pera pêssego tangerina uva 
+
+TREE CHECK:
+(NIL, mamão, preto, 3, caqui, melão)
+(mamão, caqui, preto, 2, abacaxi, laranja)
+(caqui, abacaxi, vermelho, 2, abacate, banana)
+(abacaxi, abacate, preto, 1, NIL, NIL)
+(abacaxi, banana, preto, 1, NIL, NIL)
+(caqui, laranja, vermelho, 2, figo, limão)
+(laranja, figo, preto, 1, coco, goiaba)
+(figo, coco, vermelho, 1, NIL, NIL)
+(figo, goiaba, vermelho, 1, NIL, NIL)
+(laranja, limão, preto, 1, NIL, NIL)
+(mamão, melão, preto, 2, maçã, tangerina)
+(melão, maçã, vermelho, 2, maracujá, melancia)
+(maçã, maracujá, preto, 1, manga, marmelo)
+(maracujá, manga, vermelho, 1, NIL, NIL)
+(maracujá, marmelo, vermelho, 1, NIL, NIL)
+(maçã, melancia, preto, 1, NIL, NIL)
+(melão, tangerina, vermelho, 2, pêssego, uva)
+(tangerina, pêssego, preto, 1, pera, NIL)
+(pêssego, pera, vermelho, 1, NIL, NIL)
+(tangerina, uva, preto, 1, NIL, NIL)
+
+
+     <(o_o)> bye

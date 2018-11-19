@@ -1,7 +1,0 @@
-teste 0
-abuso 1
-carro 1
-doce 1
-gola 0
-gola 1
-carro 0

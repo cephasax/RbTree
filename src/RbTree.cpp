@@ -11,7 +11,6 @@
 
 #include "Dictionary.cpp"
 #include "Node.cpp"
-#include "RbT.cpp"
 
 using namespace std;
 
@@ -29,9 +28,9 @@ int main(int argc, char const *argv[]) {
 	//TRY TO OPEN THE GIVEN FILE AND OPEN WITH DEFAULT IF NAME IS INVALID
 	dic.openFile(path);
 	if (!dic.file.is_open()){
-		cout << "The RbTree will use default file name because the given file is invalid. Default file name is \"dicionario1.txt\"" << endl;
+		cout << "The RbTree will use default file name because the given file is invalid. Default file name is \"dicionarioFrutas.txt\"" << endl;
 		path.clear();
-		path = "src\\dicionario1.txt";
+		path = "src\\dicionarioFrutas.txt";
 		dic.openFile(path);
 	}
 
