@@ -19,25 +19,32 @@ int main(int argc, char const *argv[]) {
 
 	ifstream file;
 	string path;
+	Dictionary dic;
 
-	if (argv[1] == nullptr) {
-		cout << "RbTree made with default value cause file pointed is invalid";
-		path = "dicionario1.txt";
-	}
-	else {
+	//GET FILENAME
+	if (argv[1] != NULL) {
 		path = argv[1];
 	}
-	file.open(path);
-	if (!file.is_open())
-		return -1;
 
-	std::string word;
-	int option;
+	//TRY TO OPEN THE GIVEN FILE AND OPEN WITH DEFAULT IF NAME IS INVALID
+	dic.openFile(path);
+	if (!dic.file.is_open()){
+		cout << "The RbTree will use default file name because the given file is invalid. Default file name is \"dicionario1.txt\"" << endl;
+		path.clear();
+		path = "src\\dicionario1.txt";
+		dic.openFile(path);
+	}
 
-	Dictionary dic;
-	dic.openFile("src/dicionario1.txt");
+	//Process file words and make tree according to it
 	dic.processFileCommands();
 	dic.printSpace();
+
+	//print status of Dictionary's Tree
+	dic.printStatus();
+
+	dic.userSearch();
+	dic.printBye();
+
 
 }
 

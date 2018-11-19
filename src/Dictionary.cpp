@@ -20,12 +20,14 @@ class Dictionary{
 
 		RbTree *rbt = new RbTree();
 		ifstream file;
+		int allOk = 0;
 
 		Dictionary(){
 
 		}
 
 		void openFile(string path) {
+
 			this->file.open(path);
 
 			if (!file.is_open()) {
@@ -112,6 +114,46 @@ class Dictionary{
 			string s = rbt->rbtPrint(rbt->root);
 			cout << s;
 			cout << endl;
+		}
+
+		void printStatus(){
+			if(this->file.is_open() && !this->rbt->root->isNullNode()){
+				cout << "RbTree was made with success and you can proceed with other operations" << endl;
+				this->allOk = 1;
+			}
+			else{
+				cout << "There is no RbTree built, please exit and run again" << endl;
+			}
+		}
+
+		void userSearch(){
+			string s;
+			while(true){
+
+				s.clear();
+				cout << endl;
+				cout << "Enter word to search inside the RbTree built" << endl;
+
+				getline(cin, s);
+
+				//SEARCH FOR SOME WORD GIVEN OR GETOUT IF THERE IS NO WORD
+				if(s != ""){
+					rbt->search(s);
+				}
+				else{
+					cout << "No one word to find, so..." << endl;
+					printRbKeys();
+					checkTree();
+					break;
+				}
+
+
+			}
+		}
+
+		void printBye(){
+			cout << endl << endl;
+			cout << "     <(o_o)> " << "bye";
 		}
 };
 
